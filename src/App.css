@@ -159,6 +159,16 @@ h1.merry {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* QR Code Styling */
+.gcash-qr {
+    max-width: 100%; /* Ensure QR code fills the container */
+    width: 300px; /* Set default width */
+    height: auto;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
 /* Media Queries for Mobile Responsiveness */
 @media screen and (max-width: 768px) {
     h1.merry {
@@ -187,6 +197,11 @@ h1.merry {
     .modal-container button {
         font-size: 1.2em; /* Smaller button font size */
         padding: 8px 16px; /* Adjust button padding */
+    }
+
+    .gcash-qr {
+        width: 200px; /* Smaller QR code width on tablets */
+        max-width: 80%; /* Max width for QR code */
     }
 }
 
@@ -218,13 +233,9 @@ h1.merry {
         font-size: 1.1em; /* Smaller button font size */
         padding: 6px 12px; /* Adjust button padding */
     }
-}
 
-.gcash-qr {
-    max-width: 80%; /* Set max width to a reasonable value */
-    max-height: 600px; /* Set max height to a reasonable value */
-    height: auto;
-    margin: 20px 0;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    .gcash-qr {
+        width: 180px; /* Smaller QR code width on smaller screens */
+        max-width: 80%; /* Max width for QR code */
+    }
 }

@@ -58,7 +58,7 @@ h1.merry {
 }
 
 .gift-button:hover {
-    background: linear-gradient(145deg, #8fbc8f, #ffb6b9);
+    background: linear-gradient(145deg, #2c9e4a, #76c7a3);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
     transform: translateY(-2px);
 }
@@ -80,8 +80,8 @@ h1.merry {
     padding: 30px;
     border-radius: 15px;
     width: 90%;
-    max-width: 400px;
-    max-height: 70vh;
+    max-width: 800px;  /* Increased from 600px */
+    max-height: 90vh;  /* Increased from 150vh */
     overflow-y: auto;
     text-align: center;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
@@ -89,11 +89,15 @@ h1.merry {
     border: 2px solid #2c9e4a;
 }
 
+
+
 /* Modal content (text and button) */
 .modal-container h1,
 .modal-container p {
     color: #2c9e4a; /* Green text */
     font-family: "Dancing Script", cursive;
+    font-size: 2em;
+    line-height: 1.5;
 
     margin: 10px 0;
 }

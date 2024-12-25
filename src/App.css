@@ -1,8 +1,7 @@
 /* Import Dancing Script font */
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
 
 html,
 body {
@@ -13,44 +12,39 @@ body {
     overflow: hidden;
 }
 
-
 .containerko {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
     flex-direction: column;
-    background: linear-gradient(
-        to bottom,
-        #2c9e4a,
-        #1b5e20
-    ); 
+    background: linear-gradient(to bottom, #2c9e4a, #1b5e20);
     position: relative;
     height: 100vh;
     transition: 0.5s;
 }
 
 h1.merry {
-    font-size: 4rem;
+    font-size: 7rem;
     font-family: "Dancing Script", cursive;
     text-shadow: 0 0 10px #ffcf33, /* Soft yellow glow */ 0 0 20px #ffcf33,
-        0 0 30px #ffcf33, 0 0 40px #ff7f00,
-        /* Deeper orange glow */ 0 0 50px #ff7f00, 0 0 60px #ff0000,
-        /* Red glow for contrast */ 0 0 70px #ff0000;
+        0 0 30px #ffcf33, 0 0 40px #ff7f00, 0 0 50px #ff7f00, 0 0 60px #ff0000,
+        0 0 70px #ff0000;
     animation: glow 1.5s infinite alternate;
     color: white;
 }
 
-/* Message text */
 .message {
     text-align: center;
     color: white;
+    font-family: "Dancing Script", cursive;
+    font-size: 40px;
+    
 }
 
-/* Button styling */
 .gift-button {
-    font-size: 1.2em;
-    padding: 5px 10px;
+    font-size: 2.5em;
+    padding: 20px 40px;
     background: linear-gradient(145deg, #2c9e4a, #76c7a3);
     color: white;
     border: 2px solid #ffcf33;
@@ -72,7 +66,7 @@ h1.merry {
 .package {
     position: absolute;
     width: 100%;
-    top: 20%; /* Center the modal higher up */
+    top: 20%;
     left: 0;
     display: flex;
     justify-content: center;
@@ -81,29 +75,25 @@ h1.merry {
     z-index: 10;
 }
 
-
-/* Modal container background */
 .modal-container {
-    background: rgba(255, 255, 255, 0.9); /* White background with transparency */
+    background: rgba(255, 255, 255, 0.9);
     padding: 30px;
     border-radius: 15px;
     width: 90%;
-    max-width: 400px; /* Slightly reduce the width */
-    max-height: 70vh;  /* Reduce the max height */
-    overflow-y: auto;  /* Allow scrolling if content overflows */
+    max-width: 400px;
+    max-height: 70vh;
+    overflow-y: auto;
     text-align: center;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
     animation: fadeIn 0.5s ease-out;
     border: 2px solid #2c9e4a;
 }
 
-
-
 /* Modal content (text and button) */
 .modal-container h1,
 .modal-container p {
     color: #2c9e4a; /* Green text */
-    font-family:  "Dancing Script", cursive;
+    font-family: "Dancing Script", cursive;
 
     margin: 10px 0;
 }
@@ -123,7 +113,7 @@ h1.merry {
 }
 
 .modal-container button:hover {
-    background: linear-gradient(145deg, #76c7a3, #2c9e4a); 
+    background: linear-gradient(145deg, #76c7a3, #2c9e4a);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
     transform: translateY(-2px);
 }
@@ -143,17 +133,19 @@ h1.merry {
 /* Glow effect */
 @keyframes glow {
     0% {
-        text-shadow: 0 0 10px #ffcf33, 0 0 20px #ffcf33, 0 0 30px #ff7f00, 0 0 40px #ff7f00;
+        text-shadow: 0 0 10px #ffcf33, 0 0 20px #ffcf33, 0 0 30px #ff7f00,
+            0 0 40px #ff7f00;
     }
     100% {
-        text-shadow: 0 0 20px #ff7f00, 0 0 30px #ff7f00, 0 0 40px #ff0000, 0 0 50px #ff0000;
+        text-shadow: 0 0 20px #ff7f00, 0 0 30px #ff7f00, 0 0 40px #ff0000,
+            0 0 50px #ff0000;
     }
 }
 .modal-image {
     width: 100%;
-    max-width: 250px;  
-    height: auto;      
-    margin: 20px auto; 
-    border-radius: 10px; 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    max-width: 250px;
+    height: auto;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }

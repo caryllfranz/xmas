@@ -22,6 +22,7 @@ body {
     position: relative;
     height: 100vh;
     transition: 0.5s;
+    padding: 0 10px; /* Add padding to avoid content touching edges */
 }
 
 h1.merry {
@@ -39,7 +40,6 @@ h1.merry {
     color: white;
     font-family: "Dancing Script", cursive;
     font-size: 40px;
-    
 }
 
 .gift-button {
@@ -80,16 +80,14 @@ h1.merry {
     padding: 30px;
     border-radius: 15px;
     width: 90%;
-    max-width: 800px;  /* Increased from 600px */
-    max-height: 90vh;  /* Increased from 150vh */
+    max-width: 800px; /* Increased from 600px */
+    max-height: 90vh; /* Increased from 150vh */
     overflow-y: auto;
     text-align: center;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
     animation: fadeIn 0.5s ease-out;
     border: 2px solid #2c9e4a;
 }
-
-
 
 /* Modal content (text and button) */
 .modal-container h1,
@@ -145,6 +143,7 @@ h1.merry {
             0 0 50px #ff0000;
     }
 }
+
 .modal-image {
     width: 100%;
     max-width: 250px;
@@ -152,4 +151,65 @@ h1.merry {
     margin: 20px auto;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    h1.merry {
+        font-size: 5rem; /* Smaller font for smaller screens */
+    }
+
+    .message {
+        font-size: 30px; /* Adjust message font size */
+    }
+
+    .gift-button {
+        font-size: 2em; /* Smaller button font size */
+        padding: 15px 30px; /* Adjust button padding */
+    }
+
+    .modal-container {
+        width: 85%; /* Reduce modal width */
+        padding: 20px; /* Adjust modal padding */
+    }
+
+    .modal-container h1,
+    .modal-container p {
+        font-size: 1.5em; /* Smaller text in modal */
+    }
+
+    .modal-container button {
+        font-size: 1.2em; /* Smaller button font size */
+        padding: 8px 16px; /* Adjust button padding */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1.merry {
+        font-size: 4rem; /* Even smaller font on very small screens */
+    }
+
+    .message {
+        font-size: 25px; /* Adjust message font size */
+    }
+
+    .gift-button {
+        font-size: 1.8em; /* Even smaller button font size */
+        padding: 12px 24px; /* Adjust button padding */
+    }
+
+    .modal-container {
+        width: 90%; /* Ensure modal doesn't overflow */
+        padding: 15px; /* Adjust modal padding */
+    }
+
+    .modal-container h1,
+    .modal-container p {
+        font-size: 1.2em; /* Smaller text in modal */
+    }
+
+    .modal-container button {
+        font-size: 1.1em; /* Smaller button font size */
+        padding: 6px 12px; /* Adjust button padding */
+    }
 }

@@ -10,27 +10,29 @@ function App() {
 
     // Using the typewriter hook for the message text
     const [text] = useTypewriter({
-      words: [
-        "May your holidays be filled with joy, love, and endless peace. Wishing you a magical season! 🎄❤️"
-       
-      ],
-      loop: false, // Set to false to prevent looping
-      deleteSpeed: Infinity, // Prevents deletion of text
-      typeSpeed: 50, // Faster typing speed (lower value means faster typing)
-      deleteSpeed: 50,
+        words: [
+            "May your holidays be filled with joy, love, and endless peace. Wishing you a magical season! 🎄❤️",
+        ],
+        loop: false,
+        deleteSpeed: Infinity,
+        typeSpeed: 50,
+        deleteSpeed: 50,
     });
 
     const handleClose = () => {
-        setGift(false); // Close the modal when clicked
-        setHidden(1); // Reset to the first stage
+        setGift(false);
+        setHidden(1);
     };
 
     return (
         <div className="containerko">
             <SnowOverlay />
             <h1 className="merry">Merry Christmas</h1>
-            {/* Applying the typewriter effect to the message paragraph */}
-            <p className="message">{text}<Cursor /></p>
+
+            <p className="message">
+                {text}
+                <Cursor />
+            </p>
             <button
                 className="gift-button"
                 onMouseEnter={() => setHovered(true)}
@@ -49,14 +51,17 @@ function App() {
                         {/* Stage 1 */}
                         {hidden === 1 && (
                             <>
-                            <img
-                                    src="1112.png"  // Replace with the URL of your image
+                                <img
+                                    src="1112.png"
                                     alt="Holiday Image"
                                     className="modal-image"
                                 />
                                 <h1>Hi merry christmas!</h1>
                                 <p>just wanna shoot my shot!</p>
-                                <button className="gift-button" onClick={() => setHidden(2)}>
+                                <button
+                                    className="gift-button"
+                                    onClick={() => setHidden(2)}
+                                >
                                     click mo ulit
                                 </button>
                             </>
@@ -64,18 +69,26 @@ function App() {
 
                         {hidden === 2 && (
                             <>
-                                <h1>Santa tell me if you're really there</h1>
-                                <p> we would chat until next year</p>
-                                <button className="gift-button" onClick={() => setHidden(3)}>
-                                    last na
+                                <h1>Santa, tell me if you're really there</h1>
+                                <p>We'd chat until next year</p>
+                                <button
+                                    className="gift-button"
+                                    onClick={() => setHidden(3)}
+                                >
+                                    Last na
                                 </button>
                             </>
                         )}
 
                         {hidden === 3 && (
                             <>
-                                <p className="liham">All I want for Christmas is you</p>
-                                <button className="gift-button" onClick={handleClose}>
+                                <p className="liham">
+                                    All I want for Christmas is you
+                                </p>
+                                <button
+                                    className="gift-button"
+                                    onClick={handleClose}
+                                >
                                     Close
                                 </button>
                             </>

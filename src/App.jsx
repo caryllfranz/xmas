@@ -69,8 +69,8 @@ function App() {
 
                         {hidden === 2 && (
                             <>
-                                <h1>Santa, tell me if you're really there</h1>
-                                <p>We'd chat until next year</p>
+                                <h1>Kotse ka ba?</h1>
+                                <p>kasi ang english ng kotse ay car</p>
                                 <button
                                     className="gift-button"
                                     onClick={() => setHidden(3)}
@@ -82,9 +82,12 @@ function App() {
 
                         {hidden === 3 && (
                             <>
-                                <p className="liham">
-                                    All I want for Christmas is you
-                                </p>
+                                <p className="liham">namamasko po 🎅</p>
+                                <img
+                                    src="qr.png" // Replace with the correct path to your GCash QR code
+                                    alt="GCash QR Code"
+                                    className="gcash-qr" // Apply styling if needed
+                                />
                                 <button
                                     className="gift-button"
                                     onClick={handleClose}

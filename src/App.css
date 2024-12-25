@@ -73,6 +73,7 @@ h1.merry {
     align-items: center;
     flex-direction: column;
     z-index: 10;
+    gap: 20px; /* Add some space between elements */
 }
 
 .modal-container {
@@ -87,7 +88,12 @@ h1.merry {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
     animation: fadeIn 0.5s ease-out;
     border: 2px solid #2c9e4a;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
+
 
 /* Modal content (text and button) */
 .modal-container h1,
@@ -212,4 +218,13 @@ h1.merry {
         font-size: 1.1em; /* Smaller button font size */
         padding: 6px 12px; /* Adjust button padding */
     }
+}
+
+.gcash-qr {
+    max-width: 80%; /* Set max width to a reasonable value */
+    max-height: 600px; /* Set max height to a reasonable value */
+    height: auto;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
